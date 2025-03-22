@@ -1,0 +1,37 @@
+version: 2
+
+models:
+    - name: rfn_produtos
+      description: "Tabela Refinada de Produtos"
+      columns:
+          - name: produto_id
+            description: "Chave Primária de Produtos. Identificador Único do Produto"
+            tests:
+                - unique
+                - not_null
+
+    - name: rfn_clientes
+      description: "Tabela Refinada de Clientes"
+      columns:
+          - name: cliente_id
+            description: "Chave Primária de Produtos. Identificador Único do Produto"
+            tests:
+                - unique
+                - not_null
+
+    - name: rfn_vendedores
+      description: "Tabela Refinada de Vendedores"
+      columns:
+          - name: vendedor_id
+            description: "Chave Primária do Vendedor. Identificador Único do Vendedor"
+            tests:
+                - unique
+                - not_null
+
+    - name: factual_invoice
+      description: "Tabela com as Vendas"
+      columns:
+          - name: qtde
+            description: "Quantidade vendida"
+            tests:
+                - not_null
